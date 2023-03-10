@@ -1,0 +1,46 @@
+1. recoil
+    $ npm i recoil
+    url: https://recoiljs.org/ko/docs/introduction/installation/
+    .1 atom({key})
+    : atom을 읽는 컴포넌트들은 암묵적으로 atom을 구독하고, atom에 변화가 있으면 해당 컴포넌트들이 재렌더링된다.
+
+    .2 Selector
+    : atom의 배열을 변형할 수 있다.
+2. react-hook-form
+    $ npm i react-hook-form
+    url: https://react-hook-form.com/
+    : react에서 form으로 작업할 때 편리한 lib이다.
+
+    0. Typescript
+    : register에 등록할 state들의 Interface를 작성한다.
+
+    .1 useForm()의 property
+    : 인자로 defaultValue를 설정할 수 있다.
+        .1 register { +α }
+
+        .2 watch
+        : 입력값의 변화를 관찰
+
+        .3 handleSubmit(onValid, onInValid)
+        : handleSubmit: ((data: Object, e?: Event) => void, (errors: Object, e?: Event) => void) => Function
+
+        .4 formState: { +α } 
+            .errors
+    
+    2. {...register(state, { +α })}
+        .1 required: Boolean | String
+        : React가 관리하게끔 하는 방법으로, HTML 태그의 속성은 Client에 의해 악의적으로 수정될 위험이 있다.
+
+        .2 minLength & maxLength 
+        : min length 및 error message를 설정할 수 있다.
+        
+        .3 pattern
+        : 정규식 등을 사용하여 양식을 지정할 수 있다.
+
+        .4 validate: {fn: (value) => Boolean | String;}
+        : string은 error message로 활용된다.
+
+    .3 setError(state, {message: string}, {shouldFocus: Boolean}...)
+
+    
+    
